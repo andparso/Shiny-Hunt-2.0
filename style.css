@@ -186,8 +186,8 @@ body, html {
 }
 
 .codex-entry {
-  width: 60px;
-  margin: 4px;
+  width 60px;
+  margin 4px;
   text-align: center;
   font-size: 10px;
 }
@@ -206,3 +206,71 @@ body, html {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* Enhanced Codex entry styling */
+.codex-entry {
+  width: 90px;
+  margin: 6px;
+  text-align: center;
+  font-size: 11px;
+  padding: 4px;
+  border: 1px solid #444;
+  background: rgba(20, 20, 20, 0.7);
+  border-radius: 4px;
+}
+.codex-entry img {
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+  border: 2px solid #555;
+  background: #222;
+}
+.codex-entry .name {
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 9px;
+}
+
+/* Ranch screen styling */
+#ranch-screen {
+  background-image: url('assets/backgrounds/ranch.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Encounter animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(3deg); }
+  75% { transform: rotate(-3deg); }
+}
+@keyframes zoom {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+@keyframes flip {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.anim-bounce { animation: bounce 0.6s ease-out; }
+.anim-wiggle { animation: wiggle 0.8s ease-in-out; }
+.anim-zoom { animation: zoom 0.5s ease-out; }
+.anim-flip { animation: flip 0.8s linear; }
+.anim-float { animation: float 1s ease-in-out; }
+.anim-shake { animation: shake 0.5s ease; }
